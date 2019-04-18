@@ -30,11 +30,17 @@ var _ = {};
    * implementing the sections you are responsible for.
    */
 
-  // Return an array of the first n elements of an array. If n is undefined,
-  // return just the first element.
+  // Return an array of the first n elements of an array.
+  // If n is undefined, return just the first element.
 
   _.first = function(array, n) {
-    return n === undefined ? array[0] : array.slice(0, n);
+    // n is integer
+    if (!n) {
+      return array[0]
+    } else {
+      var newArr = array.slice(0,n)
+      return newArr
+    }
   };
 
 
